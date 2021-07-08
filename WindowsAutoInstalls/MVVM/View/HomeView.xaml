@@ -23,6 +23,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Chrome"
                             Background="#2095f2">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Chrome.png"
@@ -36,6 +41,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Firefox"
                             Background="#4eff91">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Firefox.png"
@@ -49,6 +59,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Vivaldi"
                             Background="#844eff">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Vivaldi.png"
@@ -61,6 +76,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Brave"
                             Background="#ecff4e">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Brave.png"
@@ -74,6 +94,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Opera"
                             Background="#0331fc">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Opera.png"
@@ -87,6 +112,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Chrome"
                             Background="#b56f47">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Chrome.png"
@@ -115,6 +145,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Steam"
                             Background="#ecff4e">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Steam.png"
@@ -128,6 +163,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="BattleNet"
                             Background="#0331fc">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/BattleNet.png"
@@ -141,6 +181,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="EpicGames"
                             Background="#b56f47">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/EpicGames.png"
@@ -154,6 +199,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="EscapeFromTarkov"
                             Background="#4eff91">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/EscapeFromTarkov.png"
@@ -167,6 +217,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="LeagueOfLegends"
                             Background="#844eff">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/LeagueOfLegends.png"
@@ -180,6 +235,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Xbox"
                             Background="#2095f2">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Xbox.png"
@@ -209,6 +269,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="WhatsApp"
                             Background="#0331fc">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/WhatsApp.png"
@@ -221,6 +286,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="Discord"
                             Background="#844eff">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/Discord.png"
@@ -234,6 +304,11 @@
                             Command="{Binding DownloadApp}"
                             CommandParameter="MicrosoftTeams"
                             Background="#4eff91">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
                     <Image Width="80"
                             Height="80"
                             Source="/Images/MicrosoftTeams.png"
