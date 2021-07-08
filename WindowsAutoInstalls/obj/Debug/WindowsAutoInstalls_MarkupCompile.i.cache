@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-S:\Documents\Coding\WindowsAutoInstalls\WindowsAutoInstalls\obj\Debug\
+S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\obj\Debug\
 WindowsAutoInstalls
 none
 false
 DEBUG;TRACE
-S:\Documents\Coding\WindowsAutoInstalls\WindowsAutoInstalls\App.xaml
+S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\App.xaml
 7-641328301
 
 19-984852374
 13-1505183044
 MainWindow.xaml;MVVM\View\ConfiguracoesView.xaml;MVVM\View\CustomizacoesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\UtilidadesView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
-False
+True
 

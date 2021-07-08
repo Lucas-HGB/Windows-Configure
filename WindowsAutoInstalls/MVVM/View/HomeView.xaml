@@ -29,7 +29,7 @@
                        VerticalAlignment="Center">
                     </Image>
                 </Border>
-                
+
                 <Border Width="100"
                         Height="100"
                         Background="#4eff91"
@@ -41,10 +41,10 @@
                        VerticalAlignment="Center">
                     </Image>
                 </Border>
-                
+
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#844eff"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
@@ -53,10 +53,10 @@
                        VerticalAlignment="Center">
                     </Image>
                 </Border>
-                
+
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#ecff4e"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
@@ -65,10 +65,10 @@
                        VerticalAlignment="Center">
                     </Image>
                 </Border>
-                
+
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#0331fc"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
@@ -80,11 +80,98 @@
 
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#b56f47"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
                        Source="/Images/Chrome.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Gaming"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="left"
+                       Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="100"
+                        Height="100"
+                        Background="#ecff4e"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/Steam.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#0331fc"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/BattleNet.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#b56f47"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/EpicGames.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#4eff91"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/EscapeFromTarkov.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#844eff"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/LeagueOfLegends.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#2095f2"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/Xbox.png"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                     </Image>
@@ -108,11 +195,35 @@
             <StackPanel Orientation="Horizontal">
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#0331fc"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
-                       Source="/Images/Chrome.png"
+                       Source="/Images/Whatsapp.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#844eff"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/Discord.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    </Image>
+                </Border>
+
+                <Border Width="100"
+                        Height="100"
+                        Background="#4eff91"
+                        CornerRadius="10">
+                    <Image Width="80"
+                       Height="80"
+                       Source="/Images/MicrosoftTeams.png"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                     </Image>
@@ -124,7 +235,7 @@
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
-                       Source="/Images/Chrome.png"
+                       Source="/Images/Brave.png"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                     </Image>
@@ -132,11 +243,11 @@
 
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
+                        Background="#b56f47"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"
-                       Source="/Images/Chrome.png"
+                       Source="/Images/Opera.png"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">
                     </Image>
@@ -144,119 +255,7 @@
 
                 <Border Width="100"
                         Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-            </StackPanel>
-        </StackPanel>
-
-
-        <StackPanel>
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="15,0,0,0"/>
-                </Style>
-            </StackPanel.Resources>
-            <TextBlock Text="Gaming"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
+                        Background="#ecff4e"
                         CornerRadius="10">
                     <Image Width="80"
                        Height="80"

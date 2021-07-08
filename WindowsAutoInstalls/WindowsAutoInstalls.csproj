@@ -147,5 +147,18 @@
   <ItemGroup>
     <Resource Include="Images\Chrome.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BattleNet.png" />
+    <Resource Include="Images\Brave.png" />
+    <Resource Include="Images\Discord.png" />
+    <Resource Include="Images\EpicGames.png" />
+    <Resource Include="Images\EscapeFromTarkov.png" />
+    <Resource Include="Images\Firefox.png" />
+    <Resource Include="Images\MicrosoftTeams.png" />
+    <Resource Include="Images\Opera.png" />
+    <Resource Include="Images\Steam.png" />
+    <Resource Include="Images\Vivaldi.png" />
+    <Resource Include="Images\WhatsApp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
