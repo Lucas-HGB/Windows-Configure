@@ -10,8 +10,8 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
     class MainViewModel : ObservableObject
     {
         
-        public HomeViewModel HomeVM { get; set; }
-        public RelayCommand HomeViewCommand { get; set; }
+        public DownloadsViewModel1 DownloadsVM { get; set; }
+        public RelayCommand DownloadsViewCommand { get; set; }
 
         public ConfiguracoesViewModel ConfiguracoesVM { get; set; }
         public RelayCommand ConfiguracoesViewCommand { get; set; }
@@ -35,14 +35,14 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
         }
         public MainViewModel()
         {
-            HomeVM = new HomeViewModel();
+            DownloadsVM = new DownloadsViewModel1();
             ConfiguracoesVM = new ConfiguracoesViewModel();
             CustomizacoesVM = new CustomizacoesViewModel();
             UtilidadesVM = new UtilidadesViewModel();
-            CurrentView = HomeVM;
-            HomeViewCommand = new RelayCommand(o =>
+            CurrentView = DownloadsVM;
+            DownloadsViewCommand = new RelayCommand(o =>
             {
-                CurrentView = HomeVM;
+                CurrentView = DownloadsVM;
             });
 
             ConfiguracoesViewCommand = new RelayCommand(o =>

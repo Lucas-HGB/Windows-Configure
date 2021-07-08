@@ -24,17 +24,16 @@ namespace WindowsAutoInstalls.BackEnd
         public const string VLC              = "https://espejito.fder.edu.uy/videolan/vlc/3.0.12/win32/vlc-3.0.12-win32.exe";
         public const string Spotify          = "https://download.scdn.co/SpotifySetup.exe";
 
-        public const string WhatsAPP         = "https://scontent.fbnu2-1.fna.fbcdn.net/v/t39.16592-6/10000000_2934112990244426_2553949768581002104_n.exe/WhatsAppSetup.exe?_nc_cat=1&ccb=1-3&_nc_sid=3ded0d&_nc_ohc=PEQoVfNMzrYAX_-Neow&_nc_ht=scontent.fbnu2-1.fna&oh=4fb05bc0f697c3874f79dff3aca6a8f9&oe=607E2C2C";
+        public const string WhatsApp         = "https://scontent.fbnu2-1.fna.fbcdn.net/v/t39.16592-6/10000000_2934112990244426_2553949768581002104_n.exe/WhatsAppSetup.exe?_nc_cat=1&ccb=1-3&_nc_sid=3ded0d&_nc_ohc=PEQoVfNMzrYAX_-Neow&_nc_ht=scontent.fbnu2-1.fna&oh=4fb05bc0f697c3874f79dff3aca6a8f9&oe=607E2C2C";
         public const string Discord          = "https://dl.discordapp.net/apps/win/0.0.309/DiscordSetup.exe";
-        public const string Teams            = "https://statics.teams.cdn.office.net/production-windows-x64/1.4.00.4167/Teams_windows_x64.exe";
+        public const string MicrosoftTeams   = "https://statics.teams.cdn.office.net/production-windows-x64/1.4.00.4167/Teams_windows_x64.exe";
 
         public const string VsCode           = "https://az764295.vo.msecnd.net/stable/2b9aebd5354a3629c3aba0a5f5df49f43d6689f8/VSCodeUserSetup-x64-1.54.3.exe";
-        public const string Studio           = "https://download.visualstudio.microsoft.com/download/pr/1192d0de-5c6d-4274-b64d-c387185e4f45/b6bf2954c37e1caf796ee06436a02c79f7b13ae99c89b8a3b3b023d64a5935e4/vs_Community.exe";
+        public const string VisualStudio     = "https://download.visualstudio.microsoft.com/download/pr/1192d0de-5c6d-4274-b64d-c387185e4f45/b6bf2954c37e1caf796ee06436a02c79f7b13ae99c89b8a3b3b023d64a5935e4/vs_Community.exe";
         public const string SublimeText3     = "https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe";
         public const string SublimeMerge     = "https://download.sublimetext.com/sublime_merge_build_2049_x64_setup.exe";
         public const string Python3          = "https://www.python.org/ftp/python/3.9.2/python-3.9.2-amd64.exe";
         public const string Python2          = "https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi";
-        
         public const string Git              = "https://github-releases.githubusercontent.com/23216272/6cd60300-85e2-11eb-8668-392b03e9816a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210322%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210322T195337Z&X-Amz-Expires=300&X-Amz-Signature=fd0bd0af953a9d71c771ef0f6b87863e06a738990c17689c0f56862789be11dd&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=23216272&response-content-disposition=attachment%3B%20filename%3DGit-2.31.0-64-bit.exe&response-content-type=application%2Foctet-stream";
         public const string GitHubDesktop    = "https://desktop.githubusercontent.com/releases/2.6.6-74281ffb/GitHubDesktopSetup.exe";
         public const string Postman          = "https://dl.pstmn.io/download/latest/win64";
@@ -46,6 +45,12 @@ namespace WindowsAutoInstalls.BackEnd
         public const string BattleNet        = "https://us.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe";
         public const string EscapeFromTarkov = "https://cdn-13.eft-store.com/LauncherDistribs/10.4.6.1305_6aecbc5311be224956d9fefcfcd80969/BsgLauncher.10.4.6.1305.exe";
         public const string LeagueOfLegends  = "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.br.exe";
-        public const string Xbox             = "https://assets.xbox.com/installer/20190628.8/anycpu/XboxInstaller.exedo";
+        public const string Xbox             = "https://assets.xbox.com/installer/20190628.8/anycpu/XboxInstaller.exe";
+    
+    public static string GetLink(string appName)
+        {
+            return typeof(DownloadLinks).GetField(appName).GetValue(appName).ToString();
+        }
+    
     }
 }

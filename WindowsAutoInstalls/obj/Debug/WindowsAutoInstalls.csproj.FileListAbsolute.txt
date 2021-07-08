@@ -56,13 +56,11 @@ C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstall
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\bin\Debug\WindowsAutoInstalls.exe
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\bin\Debug\WindowsAutoInstalls.pdb
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csprojAssemblyReference.cache
-C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\HomeView.baml
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\Theme\MenuButtonTheme.baml
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\Theme\TextBoxTheme.baml
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MainWindow.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\ConfiguracoesView.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\CustomizacoesView.g.cs
-C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\HomeView.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\UtilidadesView.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\App.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -79,3 +77,11 @@ C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstall
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csproj.CoreCompileInputs.cache
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.exe
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.pdb
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\bin\Debug\WindowsAutoInstalls.exe.manifest
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\bin\Debug\WindowsAutoInstalls.application
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.exe.manifest
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.application
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView1.baml
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView1.g.cs
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView2.baml
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView2.g.cs

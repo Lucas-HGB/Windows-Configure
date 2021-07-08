@@ -9,9 +9,11 @@ using WindowsAutoInstalls.BackEnd;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
-    class HomeViewModel : ObservableObject
+    class DownloadsViewModel1 : ObservableObject
     {
         public RelayCommand DownloadApp { get; set; }
+
+        public RelayCommand SwitchPage { get; set; }
 
         private object _currentView;
 
@@ -25,12 +27,11 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             }
         }
 
-        public HomeViewModel()
+        public DownloadsViewModel1()
         {
-            DownloadApp = new RelayCommand(o =>
+            DownloadApp = new RelayCommand(obj =>
             {
-                MessageBox.Show(o.ToString());
-                // Do Stuff here
+                Windows.Windows.DownloadApp(obj.ToString());
             });
         }
     }

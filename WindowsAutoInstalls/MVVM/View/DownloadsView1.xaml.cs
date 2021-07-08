@@ -18,9 +18,9 @@ namespace WindowsAutoInstalls.MVVM.View
     /// <summary>
     /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class DownloadsView1 : UserControl
     {
-        public HomeView()
+        public DownloadsView1()
         {
             InitializeComponent();
         }
