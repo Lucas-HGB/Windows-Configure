@@ -160,5 +160,9 @@
     <Resource Include="Images\Vivaldi.png" />
     <Resource Include="Images\WhatsApp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LeagueOfLegends.png" />
+    <Resource Include="Images\Xbox.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

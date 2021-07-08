@@ -8,7 +8,7 @@
     <StackPanel>
         <StackPanel>
             <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
+                <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
@@ -18,84 +18,89 @@
                        HorizontalAlignment="left"
                        Margin="0,0,0,10"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Chrome"
+                            Background="#2095f2">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Chrome.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
+                
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Firefox"
+                            Background="#4eff91">
+                    <Image Width="80"
+                            Height="80"
+                            Source="/Images/Firefox.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    </Image>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#4eff91"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Vivaldi"
+                            Background="#844eff">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Firefox.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Vivaldi.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Brave"
+                            Background="#ecff4e">
+                    <Image Width="80"
+                            Height="80"
+                            Source="/Images/Brave.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    </Image>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#844eff"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Opera"
+                            Background="#0331fc">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Vivaldi.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Opera.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#ecff4e"
-                        CornerRadius="10">
+                </Button>
+                
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Chrome"
+                            Background="#b56f47">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Brave.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Chrome.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#0331fc"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Opera.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#b56f47"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
+                </Button>
 
             </StackPanel>
         </StackPanel>
 
         <StackPanel>
             <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
+                <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
@@ -105,77 +110,83 @@
                        HorizontalAlignment="left"
                        Margin="0,0,0,10"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="100"
-                        Height="100"
-                        Background="#ecff4e"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Steam"
+                            Background="#ecff4e">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Steam.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Steam.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#0331fc"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="BattleNet"
+                            Background="#0331fc">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/BattleNet.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/BattleNet.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#b56f47"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="EpicGames"
+                            Background="#b56f47">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/EpicGames.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/EpicGames.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#4eff91"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="EscapeFromTarkov"
+                            Background="#4eff91">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/EscapeFromTarkov.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/EscapeFromTarkov.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#844eff"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="LeagueOfLegends"
+                            Background="#844eff">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/LeagueOfLegends.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/LeagueOfLegends.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Xbox"
+                            Background="#2095f2">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Xbox.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Xbox.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
             </StackPanel>
         </StackPanel>
@@ -183,7 +194,7 @@
 
         <StackPanel>
             <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
+                <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
@@ -193,78 +204,43 @@
                        HorizontalAlignment="left"
                        Margin="0,0,0,10"/>
             <StackPanel Orientation="Horizontal">
-                <Border Width="100"
-                        Height="100"
-                        Background="#0331fc"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="WhatsApp"
+                            Background="#0331fc">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Whatsapp.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/WhatsApp.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#844eff"
-                        CornerRadius="10">
+                </Button>
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="Discord"
+                            Background="#844eff">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/Discord.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/Discord.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
+                </Button>
 
-                <Border Width="100"
-                        Height="100"
-                        Background="#4eff91"
-                        CornerRadius="10">
+                <Button Width="100"
+                            Height="100"
+                            Command="{Binding DownloadApp}"
+                            CommandParameter="MicrosoftTeams"
+                            Background="#4eff91">
                     <Image Width="80"
-                       Height="80"
-                       Source="/Images/MicrosoftTeams.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
+                            Height="80"
+                            Source="/Images/MicrosoftTeams.png"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#2095f2"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Brave.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#b56f47"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Opera.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
-                <Border Width="100"
-                        Height="100"
-                        Background="#ecff4e"
-                        CornerRadius="10">
-                    <Image Width="80"
-                       Height="80"
-                       Source="/Images/Chrome.png"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center">
-                    </Image>
-                </Border>
-
+                </Button>
             </StackPanel>
         </StackPanel>
     </StackPanel>
