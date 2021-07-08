@@ -6,14 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsAutoInstalls.BackEnd;
 
 namespace Windows
 {
-    class Windows
+    static class Windows
     {
-        private WebClient WebClient = new WebClient();
+        private static WebClient WebClient = new WebClient();
 
-        public void activateWindows()
+
+        public static void ActivateWindows()
         {
             Process processo = new Process();
             processo.StartInfo.FileName = "powershell.exe";
@@ -28,16 +30,16 @@ namespace Windows
             processo.Start();
         }
 
-        public String getDesktopFolder()
+        public static String GetDesktopFolder()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
         }
 
-        public void downloadFile(Uri url, string filePath) {
+        public static void DownloadApp(Uri url, string filePath) {
             WebClient.DownloadFile(url, filePath);
         }
 
-        public void executeFile(String filePath)
+        public static void ExecuteFile(String filePath)
         {
             if (!File.Exists(filePath)) {
                 throw new FileNotFoundException($"Arquivo {filePath} não encontrado!");
