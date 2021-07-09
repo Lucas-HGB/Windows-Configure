@@ -108,11 +108,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\DownloadsView2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MVVM\View\DownloadsView1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\View\DownloadsView2.xaml">
+    <Page Include="MVVM\View\DownloadsView3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +136,8 @@
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\ConfiguracoesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\CustomizacoesViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\DownloadsViewModel2.cs" />
+    <Compile Include="MVVM\ViewModel\DownloadsViewModel3.cs" />
     <Compile Include="MVVM\ViewModel\DownloadsViewModel1.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\UtilidadesViewModel.cs" />
@@ -141,11 +147,14 @@
     <Compile Include="MVVM\View\CustomizacoesView.xaml.cs">
       <DependentUpon>CustomizacoesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\DownloadsView2.xaml.cs">
+      <DependentUpon>DownloadsView2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\DownloadsView1.xaml.cs">
       <DependentUpon>DownloadsView1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\View\DownloadsView2.xaml.cs">
-      <DependentUpon>DownloadsView2.xaml</DependentUpon>
+    <Compile Include="MVVM\View\DownloadsView3.xaml.cs">
+      <DependentUpon>DownloadsView3.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\UtilidadesView.xaml.cs">
       <DependentUpon>UtilidadesView.xaml</DependentUpon>
@@ -211,6 +220,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Eclipse.png" />
+    <Resource Include="Images\Git.png" />
+    <Resource Include="Images\GitHubDesktop.png" />
+    <Resource Include="Images\Postman.png" />
+    <Resource Include="Images\PyCharm.png" />
+    <Resource Include="Images\Python3.png" />
+    <Resource Include="Images\SublimeMerge.png" />
+    <Resource Include="Images\SublimeText3.png" />
+    <Resource Include="Images\VisualStudio.png" />
+    <Resource Include="Images\VsCode.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

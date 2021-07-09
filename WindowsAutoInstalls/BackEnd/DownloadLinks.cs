@@ -15,19 +15,16 @@ namespace WindowsAutoInstalls.BackEnd
         public const string Opera            = "https://net.geo.opera.com/opera/stable/windows?utm_tryagain=yes&utm_source=google_via_opera_com&utm_medium=ose&utm_campaign=(none)_via_opera_com_https&http_referrer=https%3A%2F%2Fwww.google.com%2F&utm_site=opera_com&&utm_lastpage=opera.com/download&dl_token=83188803";
         public const string Vivaldi          = "https://downloads.vivaldi.com/stable/Vivaldi.4.0.2312.38.x64.exe";
 
-        public const string Office           = "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365ProPlusRetail&platform=Def&language=pt-br&TaxRegion=pr&correlationId=7d369f28-7249-4662-9400-105e64b948d3&token=0938a856-c554-4478-9bb2-0001e85295f6&version=O16GA&source=O15OLSO365&Br=2";
-        public const string Foxxit           = "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/win/10.x/10.1/en_us/FoxitReader10_Setup_Prom_IS.exe";
-        public const string Putty            = "https://the.earth.li/~sgtatham/putty/0.74/w64/putty-64bit-0.74-installer.msi";
-        public const string Utorrent         = "https://download-hr.utorrent.com/track/stable/endpoint/utorrent/os/windows";
-        public const string SevenZip         = "https://www.7-zip.org/a/7z1900-x64.exe";
-
+        // Media
         public const string VLC              = "https://espejito.fder.edu.uy/videolan/vlc/3.0.12/win32/vlc-3.0.12-win32.exe";
         public const string Spotify          = "https://download.scdn.co/SpotifySetup.exe";
 
+        // Social
         public const string WhatsApp         = "https://scontent.fbnu2-1.fna.fbcdn.net/v/t39.16592-6/10000000_2934112990244426_2553949768581002104_n.exe/WhatsAppSetup.exe?_nc_cat=1&ccb=1-3&_nc_sid=3ded0d&_nc_ohc=PEQoVfNMzrYAX_-Neow&_nc_ht=scontent.fbnu2-1.fna&oh=4fb05bc0f697c3874f79dff3aca6a8f9&oe=607E2C2C";
         public const string Discord          = "https://dl.discordapp.net/apps/win/0.0.309/DiscordSetup.exe";
         public const string MicrosoftTeams   = "https://statics.teams.cdn.office.net/production-windows-x64/1.4.00.4167/Teams_windows_x64.exe";
 
+        // Coding
         public const string VsCode           = "https://az764295.vo.msecnd.net/stable/2b9aebd5354a3629c3aba0a5f5df49f43d6689f8/VSCodeUserSetup-x64-1.54.3.exe";
         public const string VisualStudio     = "https://download.visualstudio.microsoft.com/download/pr/1192d0de-5c6d-4274-b64d-c387185e4f45/b6bf2954c37e1caf796ee06436a02c79f7b13ae99c89b8a3b3b023d64a5935e4/vs_Community.exe";
         public const string SublimeText3     = "https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe";
@@ -47,6 +44,17 @@ namespace WindowsAutoInstalls.BackEnd
         public const string LeagueOfLegends  = "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.br.exe";
         public const string Xbox             = "https://assets.xbox.com/installer/20190628.8/anycpu/XboxInstaller.exe";
     
+
+        // Utils
+        public const string Office           = "https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365ProPlusRetail&platform=Def&language=pt-br&TaxRegion=pr&correlationId=7d369f28-7249-4662-9400-105e64b948d3&token=0938a856-c554-4478-9bb2-0001e85295f6&version=O16GA&source=O15OLSO365&Br=2";
+        public const string Foxxit           = "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/win/10.x/10.1/en_us/FoxitReader10_Setup_Prom_IS.exe";
+        public const string Utorrent         = "https://download-hr.utorrent.com/track/stable/endpoint/utorrent/os/windows";
+        public const string SevenZip         = "https://www.7-zip.org/a/7z1900-x64.exe";
+        public const string Putty            = "https://the.earth.li/~sgtatham/putty/0.74/w64/putty-64bit-0.74-installer.msi";
+        public const strign WinDirStat       = "https://ufpr.dl.sourceforge.net/project/windirstat/windirstat/1.1.2%20installer%20re-release%20%28more%20languages%21%29/windirstat1_1_2_setup.exe";
+        
+        
+
     public static string GetLink(string appName)
         {
             return typeof(DownloadLinks).GetField(appName).GetValue(appName).ToString();

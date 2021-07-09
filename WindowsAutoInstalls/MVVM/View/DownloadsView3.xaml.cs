@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WindowsAutoInstalls.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interação lógica para DownloadsView3.xam
     /// </summary>
-    public partial class DownloadsView2 : UserControl
+    public partial class DownloadsView3 : UserControl
     {
-        public DownloadsView2()
+        public DownloadsView3()
         {
             InitializeComponent();
         }
