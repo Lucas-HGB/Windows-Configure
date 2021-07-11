@@ -17,6 +17,7 @@ namespace Windows
 
         private static Process processo = CreateProcesso();
 
+
         public static Process CreateProcesso()
         {
             Process p = new Process();
@@ -42,39 +43,56 @@ namespace Windows
             return Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
         }
 
+        private static void InstallChocolatey()
+        {
+            processo.StartInfo.Arguments = "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))";
+            processo.Start();
+            processo.WaitForExit();
+        }
+
         private static void CheckChocolateyInstall()
         {
-
+            processo.StartInfo.Arguments = "chocolatey";
+            processo.Start();
+            if (processo.ExitCode != 1)
+            {
+                InstallChocolatey();
+            }
         }
 
         public static void DownloadApp(string appName) {
            CheckChocolateyInstall();
-           string url = DownloadLinks.GetLink(appName);
-            MessageBox.Show($"Baixando {appName} de {url}");
-            string[] splitUrl = url.Split(",".ToCharArray()[0]);
-
-            string fileExtension = splitUrl[splitUrl.Count() -1];
-            string filePath;
-
-            switch (fileExtension)
+           try
             {
-                case "exe":
-                    filePath = Path.Combine($"{appName}.exe");
-                    break;
 
-                case "msi":
-                    filePath = Path.Combine($"{appName}.msi");
-                    break;
-
-                case "zip":
-                    filePath = Path.Combine($"{appName}.zip");
-                    break;
             }
+            catch (Name)
+           string url = DownloadLinks.GetLink(appName);
+           MessageBox.Show($"Baixando {appName} de {url}");
+           string[] splitUrl = url.Split(",".ToCharArray()[0]);
 
-            //WebClient.DownloadFile(url, path);
+           string fileExtension = splitUrl[splitUrl.Count() -1];
+           string filePath;
+
+           switch (fileExtension)
+           {
+               case "exe":
+                   filePath = Path.Combine($"{appName}.exe");
+                   break;
+
+               case "msi":
+                   filePath = Path.Combine($"{appName}.msi");
+                   break;
+
+               case "zip":
+                   filePath = Path.Combine($"{appName}.zip");
+                   break;
+           }
+
+           //WebClient.DownloadFile(url, path);
         }
 
-        public static void ExecuteFile(String filePath)
+        private static void ExecuteFile(String filePath)
         {
             if (!File.Exists(filePath)) {
                 throw new FileNotFoundException($"Arquivo {filePath} não encontrado!");

@@ -51,7 +51,7 @@ namespace WindowsAutoInstalls.BackEnd
         public const string Utorrent         = "https://download-hr.utorrent.com/track/stable/endpoint/utorrent/os/windows";
         public const string SevenZip         = "https://www.7-zip.org/a/7z1900-x64.exe";
         public const string Putty            = "https://the.earth.li/~sgtatham/putty/0.74/w64/putty-64bit-0.74-installer.msi";
-        public const strign WinDirStat       = "https://ufpr.dl.sourceforge.net/project/windirstat/windirstat/1.1.2%20installer%20re-release%20%28more%20languages%21%29/windirstat1_1_2_setup.exe";
+        public const string WinDirStat       = "https://ufpr.dl.sourceforge.net/project/windirstat/windirstat/1.1.2%20installer%20re-release%20%28more%20languages%21%29/windirstat1_1_2_setup.exe";
         
         
 
