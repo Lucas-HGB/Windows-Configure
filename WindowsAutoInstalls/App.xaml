@@ -28,6 +28,11 @@
             <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel3}">
                 <view:DownloadsView3/>
             </DataTemplate>
+            
+
+            <DataTemplate DataType="{x:Type viewModel:UtilidadesViewModel}">
+                <view:UtilidadesView/>
+            </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:ConfiguracoesViewModel}">
                 <view:ConfiguracoesView/>
