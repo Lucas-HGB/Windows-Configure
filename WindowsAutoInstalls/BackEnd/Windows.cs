@@ -18,7 +18,7 @@ namespace Windows
         private static Process processo = CreateProcesso();
 
 
-        public static Process CreateProcesso()
+        private static Process CreateProcesso()
         {
             Process p = new Process();
             p.StartInfo.FileName = "powershell.exe";
@@ -60,43 +60,52 @@ namespace Windows
             }
         }
 
+        private static string GetAppSaveName(string appName, string url)
+        {
+            string[] splitUrl = url.Split(",".ToCharArray()[0]);
+            string fileExtension = splitUrl[splitUrl.Count() - 1];
+            switch (fileExtension)
+            {
+                case "exe":
+                    return Path.Combine($"{appName}.exe");
+
+                case "msi":
+                    return Path.Combine($"{appName}.msi");
+
+                case "zip":
+                    return Path.Combine($"{appName}.zip");
+
+                default:
+                    return Path.Combine($"{appName}.exe");
+            }
+        }
+
         public static void DownloadApp(string appName) {
-           CheckChocolateyInstall();
-           try
-            {
-                // Installs via chocolatey
+            CheckChocolateyInstall();
+            // Installs via chocolatey
+            string chocAppName = Downloads.GetChocolateyAppName(appName);
+            if (!chocAppName.Equals("")) {
+                 using (Process process = new Process())
+                 {
+                     process.StartInfo.Arguments = $"chocolatey install -y {chocAppName}";
+                     process.Start();
+                     process.WaitForExit();
+                 }
             }
-            catch ()
+            else
             {
-                // Installs via exe
+                // Downloads executable file for program
+                string url = Downloads.GetLink(appName);
+                MessageBox.Show($"Baixando {appName}");
+                string path = GetAppSaveName(appName, url);
+                WebClient.DownloadFile(url, path);
+                ExecuteFile(path);
             }
-           string url = DownloadLinks.GetLink(appName);
-           MessageBox.Show($"Baixando {appName} de {url}");
-           string[] splitUrl = url.Split(",".ToCharArray()[0]);
-
-           string fileExtension = splitUrl[splitUrl.Count() -1];
-           string filePath;
-
-           switch (fileExtension)
-           {
-               case "exe":
-                   filePath = Path.Combine($"{appName}.exe");
-                   break;
-
-               case "msi":
-                   filePath = Path.Combine($"{appName}.msi");
-                   break;
-
-               case "zip":
-                   filePath = Path.Combine($"{appName}.zip");
-                   break;
-           }
-
-           //WebClient.DownloadFile(url, path);
         }
 
         private static void ExecuteFile(String filePath)
         {
+            // Executes file, used by DownloadApp when chocolatye doesn't have such package
             if (!File.Exists(filePath)) {
                 throw new FileNotFoundException($"Arquivo {filePath} não encontrado!");
             }

@@ -12,13 +12,25 @@
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel}">
+                <view:DownloadsView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel1}">
                 <view:DownloadsView1/>
             </DataTemplate>
 
-          <DataTemplate DataType="{x:Type viewModel:ConfiguracoesViewModel}">
-            <view:ConfiguracoesView/>
-          </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel2}">
+                <view:DownloadsView2/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel3}">
+                <view:DownloadsView3/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ConfiguracoesViewModel}">
+                <view:ConfiguracoesView/>
+            </DataTemplate>
 
           <DataTemplate DataType="{x:Type viewModel:CustomizacoesViewModel}">
              <view:CustomizacoesView/>

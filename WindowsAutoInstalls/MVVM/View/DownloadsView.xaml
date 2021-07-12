@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="WindowsAutoInstalls.MVVM.View.DownloadsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View"
+             xmlns:viewModel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:DownloadsViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <ContentControl Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="10"
+                        Content="{Binding CurrentView}"/>
+        <StackPanel VerticalAlignment="Bottom"
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="Width" Value="20"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="Gray"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="0,0,3,3"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="1"
+                        Command="{Binding Downloads1ViewCommand}"/>
+            <Button Content="2"
+                        Command="{Binding Downloads2ViewCommand}"/>
+            <Button Content="3"
+                        Command="{Binding Downloads3ViewCommand}"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -45,7 +45,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}"
+                             Command="{Binding DownloadsViewCommand}"
                              FontFamily="/Fonts/#Poppins"/>
 
                 <RadioButton Content="Utilidades"

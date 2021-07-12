@@ -92,7 +92,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BackEnd\DownloadLinks.cs" />
+    <Compile Include="BackEnd\Downloads.cs" />
     <Compile Include="BackEnd\Windows.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
@@ -105,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVVM\View\CustomizacoesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\DownloadsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +140,7 @@
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\ConfiguracoesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\CustomizacoesViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\DownloadsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DownloadsViewModel2.cs" />
     <Compile Include="MVVM\ViewModel\DownloadsViewModel3.cs" />
     <Compile Include="MVVM\ViewModel\DownloadsViewModel1.cs" />
@@ -146,6 +151,9 @@
     </Compile>
     <Compile Include="MVVM\View\CustomizacoesView.xaml.cs">
       <DependentUpon>CustomizacoesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\DownloadsView.xaml.cs">
+      <DependentUpon>DownloadsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\DownloadsView2.xaml.cs">
       <DependentUpon>DownloadsView2.xaml</DependentUpon>
@@ -232,6 +240,17 @@
     <Resource Include="Images\SublimeText3.png" />
     <Resource Include="Images\VisualStudio.png" />
     <Resource Include="Images\VsCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\7z.png" />
+    <Resource Include="Images\Foxxit.png" />
+    <Resource Include="Images\Java.png" />
+    <Resource Include="Images\Office.png" />
+    <Resource Include="Images\Putty.png" />
+    <Resource Include="Images\Spotify.png" />
+    <Resource Include="Images\Utorrent.png" />
+    <Resource Include="Images\VLC.png" />
+    <Resource Include="Images\WinDirStat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

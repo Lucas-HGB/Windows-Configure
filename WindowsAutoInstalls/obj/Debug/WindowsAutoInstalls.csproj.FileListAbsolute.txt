@@ -93,3 +93,7 @@ S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\Do
 S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView3.g.cs
 S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView2.baml
 S:\Documents\Coding\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView2.g.cs
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView3.baml
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView3.g.cs
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView.g.cs
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView.baml

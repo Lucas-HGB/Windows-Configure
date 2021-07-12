@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WindowsAutoInstalls.Core;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
@@ -10,7 +11,7 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
     class MainViewModel : ObservableObject
     {
         
-        public DownloadsViewModel1 DownloadsVM { get; set; }
+        public DownloadsViewModel DownloadsVM { get; set; }
         public RelayCommand DownloadsViewCommand { get; set; }
 
         public ConfiguracoesViewModel ConfiguracoesVM { get; set; }
@@ -35,7 +36,7 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
         }
         public MainViewModel()
         {
-            DownloadsVM = new DownloadsViewModel1();
+            DownloadsVM = new DownloadsViewModel();
             ConfiguracoesVM = new ConfiguracoesViewModel();
             CustomizacoesVM = new CustomizacoesViewModel();
             UtilidadesVM = new UtilidadesViewModel();

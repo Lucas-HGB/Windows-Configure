@@ -11,28 +11,8 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
 {
     class DownloadsViewModel2 : ObservableObject
     {
-        public RelayCommand DownloadApp { get; set; }
-
-        public RelayCommand SwitchPage { get; set; }
-
-        private object _currentView;
-
-        public object CurrentView
-        {
-            get { return _currentView; }
-            set
-            {
-                _currentView = value;
-                OnPropertyChanged();
-            }
-        }
-
         public DownloadsViewModel2()
         {
-            DownloadApp = new RelayCommand(obj =>
-            {
-                Windows.Windows.DownloadApp(obj.ToString());
-            });
         }
     }
 }
