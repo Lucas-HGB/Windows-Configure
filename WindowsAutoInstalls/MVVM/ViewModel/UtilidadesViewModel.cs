@@ -16,13 +16,10 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
 
         public UtilidadesViewModel()
         {
-
-
             CheckFirewallStatus = new RelayCommand(o =>
             {
                 Checks.FirewallStatus();
             });
-
         }
     }
 }

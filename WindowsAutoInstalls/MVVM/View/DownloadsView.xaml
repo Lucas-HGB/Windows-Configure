@@ -23,7 +23,6 @@
             <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel3}">
                 <view:DownloadsView3/>
             </DataTemplate>
-            
         </ResourceDictionary>
     </UserControl.Resources>
 

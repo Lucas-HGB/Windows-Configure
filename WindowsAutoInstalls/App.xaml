@@ -5,6 +5,7 @@
              xmlns:viewModel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel"
              xmlns:view="clr-namespace:WindowsAutoInstalls.MVVM.View"
              StartupUri="MainWindow.xaml">
+    
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -16,7 +17,6 @@
             <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel}">
                 <view:DownloadsView/>
             </DataTemplate>
-
 
             <DataTemplate DataType="{x:Type viewModel:UtilidadesViewModel}">
                 <view:UtilidadesView/>

@@ -12,8 +12,14 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
     class DownloadsViewModel3 : ObservableObject
     {
 
+        public RelayCommand DownloadApp { get; set; }
+
         public DownloadsViewModel3()
         {
+            DownloadApp = new RelayCommand(o =>
+            {
+                Windows.Windows.DownloadApp(o.ToString());
+            });
         }
     }
 }
