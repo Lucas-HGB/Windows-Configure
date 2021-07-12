@@ -4,19 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View"
-             xmlns:viewModel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel"
+             xmlns:viewmodel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel" 
+             d:DataContext="{d:DesignInstance Type=viewmodel:DownloadsViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <UserControl.DataContext>
-        <viewModel:DownloadsViewModel/>
-    </UserControl.DataContext>
-    
     <Grid>
         <ContentControl Grid.Row="1"
                         Grid.Column="1"
                         Margin="10"
-                        Content="{Binding CurrentView}"/>
+                        Content="{Binding CurrentView}">
+        </ContentControl>
         <StackPanel VerticalAlignment="Bottom"
                     Orientation="Horizontal" 
                     HorizontalAlignment="Center">

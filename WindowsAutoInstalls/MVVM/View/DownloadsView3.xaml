@@ -9,170 +9,57 @@
 
 
 
-    <StackPanel>
-        <StackPanel.Resources>
-            <Style TargetType="{x:Type Button}">
-                <Setter Property="Width" Value="100"/>
-                <Setter Property="Height" Value="100"/>
-                <Setter Property="Background" Value="#343149"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="Margin" Value="0,0,15,15"/>
-                <Setter Property="Command" Value="{Binding DownloadApp}"/>
-            </Style>
-            <Style TargetType="{x:Type Image}">
-                <Setter Property="Width" Value="80"/>
-                <Setter Property="Height" Value="80"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-            </Style>
-        </StackPanel.Resources>
+    <StackPanel  Style="{StaticResource DowloadsStackPanel}">
+        <TextBlock Text="Coding"/>
         <StackPanel>
-            <TextBlock Text="Coding"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="SublimeText3">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/SublimeText3.png"/>
-                </Button>
+            <Button CommandParameter="SublimeText3">
+                <Image Source="/Images/SublimeText3.png"/>
+            </Button>
 
-                <Button CommandParameter="SublimeMerge">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/SublimeMerge.png"/>
-                </Button>
+            <Button CommandParameter="SublimeMerge">
+                <Image  Source="/Images/SublimeMerge.png"/>
+            </Button>
 
-                <Button CommandParameter="VsCode">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/VsCode.png"/>
-                </Button>
+            <Button CommandParameter="VsCode">
+                <Image Source="/Images/VsCode.png"/>
+            </Button>
 
-                <Button CommandParameter="VisualStudio">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/VisualStudio.png"/>
-                </Button>
+            <Button CommandParameter="VisualStudio">
+                <Image  Source="/Images/VisualStudio.png"/>
+            </Button>
 
-                <Button CommandParameter="PyCharm">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/PyCharm.png"/>
-                </Button>
+            <Button CommandParameter="PyCharm">
+                <Image  Source="/Images/PyCharm.png"/>
+            </Button>
 
-                <Button CommandParameter="Eclipse">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Eclipse.png"/>
-                </Button>
+            <Button CommandParameter="Eclipse">
+                <Image  Source="/Images/Eclipse.png"/>
+            </Button>
 
-                <Button CommandParameter="GitHubDesktop">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/GitHubDesktop.png"/>
-                </Button>
+            <Button CommandParameter="GitHubDesktop">
+                <Image  Source="/Images/GitHubDesktop.png"/>
+            </Button>
 
-                <Button CommandParameter="Postman">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Postman.png"/>
-                </Button>
-            </StackPanel>
+            <Button CommandParameter="Postman">
+                <Image  Source="/Images/Postman.png"/>
+            </Button>
         </StackPanel>
-
         <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="Git">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Git.png"/>
-                </Button>
+            <Button CommandParameter="Postman">
+                <Image  Source="/Images/Postman.png"/>
+            </Button>
+            
+            <Button CommandParameter="Git">
+                <Image  Source="/Images/Git.png"/>
+            </Button>
 
-                <Button CommandParameter="Python3">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Python3.png"/>
-                </Button>
+            <Button CommandParameter="Python3">
+                <Image  Source="/Images/Python3.png"/>
+            </Button>
 
-                <Button CommandParameter="Java">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Java.png"/>
-                </Button>
-            </StackPanel>
-        </StackPanel>
-
-
-        <StackPanel>
-            <TextBlock Text="Media"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="WhatsApp">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/WhatsApp.png"/>
-                </Button>
-
-                <Button CommandParameter="Discord">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Discord.png"/>
-                </Button>
-
-                <Button CommandParameter="MicrosoftTeams">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/MicrosoftTeams.png"/>
-                </Button>
-            </StackPanel>
+            <Button CommandParameter="Java">
+                <Image  Source="/Images/Java.png"/>
+            </Button>
         </StackPanel>
     </StackPanel>
 </UserControl>

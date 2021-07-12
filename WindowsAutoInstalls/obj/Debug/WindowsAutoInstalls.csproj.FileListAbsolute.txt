@@ -97,3 +97,4 @@ C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstall
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView3.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView.g.cs
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\MVVM\View\DownloadsView.baml
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\Theme\DownloadsScreenTheme.baml

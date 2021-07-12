@@ -8,176 +8,66 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <StackPanel>
-        <StackPanel.Resources>
-            <Style TargetType="{x:Type Button}">
-                <Setter Property="Width" Value="100"/>
-                <Setter Property="Height" Value="100"/>
-                <Setter Property="Background" Value="#343149"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="Margin" Value="0,0,15,15"/>
-                <Setter Property="Command" Value="{Binding DownloadApp}"/>
-            </Style>
-            <Style TargetType="{x:Type Image}">
-                <Setter Property="Width" Value="80"/>
-                <Setter Property="Height" Value="80"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-            </Style>
-        </StackPanel.Resources>
+    <StackPanel  Style="{StaticResource DowloadsStackPanel}">
+        <TextBlock Text="Web"/>
         <StackPanel>
-            <TextBlock Text="Web"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="Chrome">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Chrome.png"/>
-                </Button>
+            <Button CommandParameter="Chrome">
+                <Image Source="/Images/Chrome.png"/>
+            </Button>
 
-                <Button CommandParameter="Firefox">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Firefox.png"/>
-                </Button>
+            <Button CommandParameter="Firefox">
+                <Image  Source="/Images/Firefox.png"/>
+            </Button>
 
-                <Button CommandParameter="Vivaldi">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Vivaldi.png"/>
-                </Button>
-                
-                <Button CommandParameter="Brave">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Brave.png"/>
-                </Button>
+            <Button CommandParameter="Vivaldi">
+                <Image  Source="/Images/Vivaldi.png"/>
+            </Button>
 
-                <Button CommandParameter="Opera">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Opera.png"/>
-                </Button>
-            </StackPanel>
+            <Button CommandParameter="Brave">
+                <Image  Source="/Images/Brave.png"/>
+            </Button>
+
+            <Button CommandParameter="Opera">
+                <Image  Source="/Images/Opera.png"/>
+            </Button>
         </StackPanel>
 
+        <TextBlock Text="Gaming"/>
         <StackPanel>
-            <TextBlock Text="Gaming"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="Steam">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Steam.png"/>
-                </Button>
+            <Button CommandParameter="Steam">
+                <Image Source="/Images/Steam.png"/>
+            </Button>
 
-                <Button CommandParameter="BattleNet">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/BattleNet.png"/>
-                </Button>
+            <Button CommandParameter="BattleNet">
+                <Image  Source="/Images/BattleNet.png"/>
+            </Button>
 
-                <Button CommandParameter="EpicGames">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/EpicGames.png"/>
-                </Button>
+            <Button CommandParameter="EpicGames">
+                <Image  Source="/Images/EpicGames.png"/>
+            </Button>
 
-                <Button CommandParameter="EscapeFromTarkov">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/EscapeFromTarkov.png"/>
-                </Button>
+            <Button CommandParameter="EscapeFromTarkov">
+                <Image  Source="/Images/EscapeFromTarkov.png"/>
+            </Button>
 
-                <Button CommandParameter="LeagueOfLegends">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/LeagueOfLegends.png"/>
-                </Button>
-
-                <Button CommandParameter="Xbox">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Xbox.png"/>
-                </Button>
-
-            </StackPanel>
+            <Button CommandParameter="LeagueOfLegends">
+                <Image  Source="/Images/LeagueOfLegends.png"/>
+            </Button>
         </StackPanel>
 
-
+        <TextBlock Text="Social"/>
         <StackPanel>
-            <TextBlock Text="Social"
-                       Foreground="White"
-                       FontSize="20"
-                       HorizontalAlignment="left"
-                       Margin="0,0,0,10"/>
-            <StackPanel Orientation="Horizontal">
-                <Button CommandParameter="WhatsApp">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/WhatsApp.png"/>
-                </Button>
+            <Button CommandParameter="WhatsApp">
+                <Image Source="/Images/WhatsApp.png"/>
+            </Button>
 
-                <Button CommandParameter="Discord">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/Discord.png"/>
-                </Button>
+            <Button CommandParameter="Discord">
+                <Image  Source="/Images/Discord.png"/>
+            </Button>
 
-                <Button CommandParameter="MicrosoftTeams">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Button.Resources>
-                    <Image  Source="/Images/MicrosoftTeams.png"/>
-                </Button>
-            </StackPanel>
+            <Button CommandParameter="MicrosoftTeams">
+                <Image  Source="/Images/MicrosoftTeams.png"/>
+            </Button>
         </StackPanel>
     </StackPanel>
 </UserControl>
