@@ -64,9 +64,12 @@ namespace Windows
            CheckChocolateyInstall();
            try
             {
-
+                // Installs via chocolatey
             }
-            catch (Name)
+            catch ()
+            {
+                // Installs via exe
+            }
            string url = DownloadLinks.GetLink(appName);
            MessageBox.Show($"Baixando {appName} de {url}");
            string[] splitUrl = url.Split(",".ToCharArray()[0]);
