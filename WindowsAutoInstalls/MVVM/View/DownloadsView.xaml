@@ -4,10 +4,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View"
-             xmlns:viewmodel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel" 
-             d:DataContext="{d:DesignInstance Type=viewmodel:DownloadsViewModel}"
+             xmlns:viewModel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel" 
+             xmlns:view="clr-namespace:WindowsAutoInstalls.MVVM.View"
+             d:DataContext="{d:DesignInstance Type=viewModel:DownloadsViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel1}">
+                <view:DownloadsView1/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel2}">
+                <view:DownloadsView2/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel3}">
+                <view:DownloadsView3/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </UserControl.Resources>
 
     <Grid>
         <ContentControl Grid.Row="1"

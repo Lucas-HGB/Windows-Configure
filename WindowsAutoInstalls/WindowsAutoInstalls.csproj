@@ -92,6 +92,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BackEnd\Checks.cs" />
     <Compile Include="BackEnd\Downloads.cs" />
     <Compile Include="BackEnd\Windows.cs" />
     <Compile Include="Core\ObservableObject.cs" />

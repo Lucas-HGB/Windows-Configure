@@ -3,11 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View"
+             xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View" 
+             xmlns:viewmodel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel" 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="MediumAquamarine">
+             Background="Transparent">
+    
+
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="#D5F9DE"/>
+            </Style>
+            <Style TargetType="{x:Type ToggleButton}">
+                <Setter Property="Width" Value="60"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+
+            </Style>
+        </Grid.Resources>
+
+        <TextBlock  Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Ativar o Windows">
+        </TextBlock>
+
+        <Button Grid.Row="1"
+                Grid.Column="0">
+        </Button>
+
+        <TextBlock  Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Status Firewall">
+        </TextBlock>
+
+        <ToggleButton Grid.Row="1"
+                      Grid.Column="1"
+                      IsEnabled="{Binding Checks.FirewallStatus}">
+        </ToggleButton>
     </Grid>
 </UserControl>
