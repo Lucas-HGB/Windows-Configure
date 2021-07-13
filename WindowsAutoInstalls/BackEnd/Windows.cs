@@ -23,10 +23,10 @@ namespace Windows
         private static Process CreateProcesso()
         {
             Process p = new Process();
+            p.StartInfo.Verb = "runas";
             p.StartInfo.FileName = "powershell.exe";
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.Verb = "runas";
             return p;
         }
 
@@ -62,7 +62,7 @@ namespace Windows
             }
         }
 
-        private static string GetAppSaveName(string appName, string url)
+        private static string GetAppSavePath(string appName, string url)
         {
             string[] splitUrl = url.Split(",".ToCharArray()[0]);
             string fileExtension = splitUrl[splitUrl.Count() - 1];
@@ -99,7 +99,7 @@ namespace Windows
                 // Downloads executable file for program
                 string url = Downloads.GetLink(appName);
                 MessageBox.Show($"Baixando {appName}");
-                string path = GetAppSaveName(appName, url);
+                string path = GetAppSavePath(appName, url);
                 WebClient.DownloadFile(url, path);
                 ExecuteFile(path);
             }
@@ -136,7 +136,26 @@ namespace Windows
 
         public static void ToggleFirewallState()
         {
-            NetworkManager.LocalPolicy.CurrentProfile.FirewallEnabled = false;
+            Process process = CreateProcesso();
+            process.StartInfo.FileName = "netsh.exe";
+            switch(GetFirewallStatus())
+            {
+                case true:
+                    process.StartInfo.Arguments = "Advfirewall set allprofiles state off";
+                    break;
+                case false:
+                    process.StartInfo.Arguments = "Advfirewall set allprofiles state on";
+                    break;
+            }
+            process.Start();
+            process.WaitForExit();
+            if (process.StandardOutput.ReadToEnd().ToLower().Contains("admin"))
+            {
+                // Erro ao rodar o comando, notificar usuário que o programa deve ser executado como admin.
+                // Como notificar o usuário?
+                MessageBox.Show("ADMIN");
+            }
+            process.Close();
         }
     }
 }

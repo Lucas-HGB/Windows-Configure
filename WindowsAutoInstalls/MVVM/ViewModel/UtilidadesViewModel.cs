@@ -19,6 +19,8 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
 
         public RelayCommand ToggleFirewall { get; set; }
 
+        public RelayCommand ActivateWindows { get; set; }
+
         private bool _firewallStatus;
 
         public bool FirewallStatus
@@ -39,6 +41,10 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             ToggleFirewall = new RelayCommand(o =>
             {
                 Windows.Windows.ToggleFirewallState();
+            });
+            ActivateWindows = new RelayCommand(o =>
+            {
+                Windows.Windows.ActivateWindows();
             });
         }
 

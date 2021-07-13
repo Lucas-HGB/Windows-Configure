@@ -160,3 +160,4 @@ C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstall
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\Interop.NetFwTypeLib.dll
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csproj.ResolveComReference.cache
 C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csproj.CopyComplete
+C:\Users\lucas.hoeltgebaum\Documents\GitHub\Windows-Configure\WindowsAutoInstalls\obj\Debug\Theme\ToggleButtonTheme.baml
