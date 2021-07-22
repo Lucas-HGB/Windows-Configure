@@ -68,7 +68,7 @@ namespace WindowsAutoInstalls.BackEnd
                     return "firefox";
 
                 case "Chrome":
-                    return "chrome";
+                    return "googlechrome";
 
                 case "Brave":
                     return "brave";
@@ -115,7 +115,7 @@ namespace WindowsAutoInstalls.BackEnd
                 case "Pycharm":
                     return "pycharm";
 
-                case "steam":
+                case "Steam":
                     return "steam-client";
 
                 case "EpicGames":

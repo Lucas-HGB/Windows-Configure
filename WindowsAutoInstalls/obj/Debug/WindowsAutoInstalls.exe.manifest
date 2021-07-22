@@ -618,14 +618,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsAutoInstalls.exe" size="4286960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsAutoInstalls.exe" size="4286448">
       <assemblyIdentity name="WindowsAutoInstalls" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>E7UzDoJjnrrRuG8H6KUbR3thKxKmGT3NW6UNPdkZJ6E=</dsig:DigestValue>
+        <dsig:DigestValue>NjnzNaO7S1584edv5BUQdl3Z/fIvRKCabzsh4S8k2Go=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

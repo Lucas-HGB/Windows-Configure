@@ -19,6 +19,8 @@ namespace Windows
 
         private static NetFwTypeLib.INetFwMgr NetworkManager = GetNetWorkManager();
 
+        private static string Choco = "C:\\ProgramData\\chocolatey\\bin\\chocolatey.exe";
+
 
         private static Process CreateProcesso()
         {
@@ -27,6 +29,7 @@ namespace Windows
             p.StartInfo.FileName = "powershell.exe";
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.CreateNoWindow = true;
             return p;
         }
 
@@ -54,9 +57,7 @@ namespace Windows
 
         private static void CheckChocolateyInstall()
         {
-            processo.StartInfo.Arguments = "chocolatey";
-            processo.Start();
-            if (processo.ExitCode != 1)
+            if (! File.Exists(Choco))
             {
                 InstallChocolatey();
             }
@@ -85,13 +86,22 @@ namespace Windows
         public static void DownloadApp(string appName) {
             CheckChocolateyInstall();
             // Installs via chocolatey
-            string chocAppName = Downloads.GetChocolateyAppName(appName);
-            if (!chocAppName.Equals("")) {
+            string chocoAppName = Downloads.GetChocolateyAppName(appName);
+            if (!chocoAppName.Equals("")) {
                  using (Process process = new Process())
                  {
-                     process.StartInfo.Arguments = $"chocolatey install -y {chocAppName}";
-                     process.Start();
-                     process.WaitForExit();
+                    process.StartInfo.Verb = "runas";
+                    process.StartInfo.FileName = "powershell.exe";
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.RedirectStandardOutput = false;
+                    process.StartInfo.CreateNoWindow = true;
+                    process.StartInfo.Arguments = $"{Choco} install -y {chocoAppName}";
+                    process.Start();
+                    process.WaitForExit();
+                    if (process.ExitCode == 0)
+                    {
+                        // Ocorreu tudo certo, mostrar notificação ao usuário
+                    }
                  }
             }
             else
