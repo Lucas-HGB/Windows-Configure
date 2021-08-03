@@ -88,31 +88,41 @@ namespace Windows
             // Installs via chocolatey
             string chocoAppName = Downloads.GetChocolateyAppName(appName);
             if (!chocoAppName.Equals("")) {
-                 using (Process process = new Process())
-                 {
-                    process.StartInfo.Verb = "runas";
-                    process.StartInfo.FileName = "powershell.exe";
-                    process.StartInfo.UseShellExecute = false;
-                    process.StartInfo.RedirectStandardOutput = false;
-                    process.StartInfo.CreateNoWindow = true;
-                    process.StartInfo.Arguments = $"{Choco} install -y {chocoAppName}";
-                    process.Start();
-                    process.WaitForExit();
-                    if (process.ExitCode == 0)
-                    {
-                        // Ocorreu tudo certo, mostrar notificação ao usuário
-                    }
-                 }
+                DownloadAppViaChocolatey(chocoAppName);
             }
             else
             {
-                // Downloads executable file for program
-                string url = Downloads.GetLink(appName);
-                MessageBox.Show($"Baixando {appName}");
-                string path = GetAppSavePath(appName, url);
-                WebClient.DownloadFile(url, path);
-                ExecuteFile(path);
+                DownloadAppViaFile(appName);
             }
+        }
+
+        private static void DownloadAppViaChocolatey(string chocoAppName)
+        {
+            using (Process process = new Process())
+            {
+                process.StartInfo.Verb = "runas";
+                process.StartInfo.FileName = "powershell.exe";
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = false;
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.Arguments = $"{Choco} install -y {chocoAppName}";
+                process.Start();
+                process.WaitForExit();
+                if (process.ExitCode == 0)
+                {
+                    // Ocorreu tudo certo, mostrar notificação ao usuário
+                }
+            }
+        }
+
+        private static void DownloadAppViaFile(string appName)
+        {
+            // Downloads executable file for program
+            string url = Downloads.GetLink(appName);
+            MessageBox.Show($"Baixando {appName}");
+            string path = GetAppSavePath(appName, url);
+            WebClient.DownloadFile(url, path);
+            ExecuteFile(path);
         }
 
         private static void ExecuteFile(String filePath)
