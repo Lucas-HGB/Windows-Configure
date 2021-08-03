@@ -173,7 +173,7 @@ namespace Windows
             {
                 // Erro ao rodar o comando, notificar usuário que o programa deve ser executado como admin.
                 // Como notificar o usuário?
-                MessageBox.Show("ADMIN");
+                MessageBox.Show("Para alterar o Status do Firewall, execute o programa com privilégios de administrador");
             }
             process.Close();
         }

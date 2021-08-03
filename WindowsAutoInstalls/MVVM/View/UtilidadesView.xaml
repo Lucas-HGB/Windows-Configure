@@ -61,26 +61,14 @@
 
         <TextBlock  Grid.Row="0"
                     Grid.Column="1"
-                    Text="Status Firewall">
-        </TextBlock>
+                    Text="Status Firewall"/>
 
-        <ToggleButton Grid.Row="1"
-                      Grid.Column="1"
-                      Style="{StaticResource ToggleButton}"
-                      Command="{Binding ToggleFirewall}"
-                      IsChecked="{Binding FirewallStatus, Mode=OneWay}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0"
-                           Text="On"
-                           HorizontalAlignment="Left"/>
-                <TextBlock Grid.Column="1"
-                           Text="Off"
-                           HorizontalAlignment="Right"/>
-            </Grid>
-        </ToggleButton>
+        <Button     Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding ToggleFirewall, UpdateSourceTrigger=PropertyChanged}"
+                    Content="{Binding FirewallStatusString, Mode=TwoWay}">
+        </Button>
+
+
     </Grid>
 </UserControl>

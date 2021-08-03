@@ -12,7 +12,6 @@
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/DownloadsScreenTheme.xaml"/>
-                <ResourceDictionary Source="Theme/ToggleButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel}">

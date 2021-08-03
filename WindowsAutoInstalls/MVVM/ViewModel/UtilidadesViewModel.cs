@@ -19,9 +19,11 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
 
         public RelayCommand ToggleFirewall { get; set; }
 
+        public RelayCommand GetFirewallStatusString { get; set; }
+
         public RelayCommand ActivateWindows { get; set; }
 
-        private bool _firewallStatus;
+        private bool _firewallStatus = Windows.Windows.GetFirewallStatus();
 
         public bool FirewallStatus
         {
@@ -33,15 +35,38 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             }
         }
 
+        private string _firewallStatusString;
+
+        public string FirewallStatusString
+        {
+            get { return _firewallStatusString;  }
+            set { _firewallStatusString = value; }
+        }
+
+        public void ToggleFirewallString()
+        {
+            if (Windows.Windows.GetFirewallStatus())
+            {
+                _firewallStatusString = "On";
+            }
+            else
+            {
+                _firewallStatusString = "Off";
+            }
+        }
+
 
 
         public UtilidadesViewModel()
         {
-            _firewallStatus = Windows.Windows.GetFirewallStatus(); // Seta toggle do Firewall para devido valor
+            ToggleFirewallString();
             ToggleFirewall = new RelayCommand(o =>
             {
                 Windows.Windows.ToggleFirewallState();
+                FirewallStatus = Windows.Windows.GetFirewallStatus();
+                ToggleFirewallString();
             });
+
             ActivateWindows = new RelayCommand(o =>
             {
                 Windows.Windows.ActivateWindows();
