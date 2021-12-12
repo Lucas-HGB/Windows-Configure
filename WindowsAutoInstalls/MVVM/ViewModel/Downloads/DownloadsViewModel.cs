@@ -55,11 +55,7 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             DownloadApp = new RelayCommand(o =>
             {
                 MessageBox.Show(o.ToString());
-                //Windows.Windows.DownloadApp(o.ToString());
             });
         }
-
-
-
     }
 }

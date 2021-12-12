@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsAutoInstalls.BackEnd
+namespace WindowsAutoInstalls.BackEnd.Downloads
 {
-    static class Downloads
+    static class DownloadLinks
     {
         // Web
         public const string Firefox          = "https://cdn.stubdownloader.services.mozilla.com/builds/firefox-stub/pt-BR/win/4d5877790e1e3ee624d5ff1d959b12ffcf931f1d2997991bd4fe8ca0e12cc340/Firefox%20Installer.exe";
@@ -57,79 +57,8 @@ namespace WindowsAutoInstalls.BackEnd
 
         public static string GetLink(string appName)
         {
-            return typeof(Downloads).GetField(appName).GetValue(appName).ToString();
+            return typeof(DownloadLinks).GetField(appName).GetValue(appName).ToString();
         }
 
-        public static string GetChocolateyAppName(string appName)
-        {
-            switch(appName)
-            {
-                case "Firefox":
-                    return "firefox";
-
-                case "Chrome":
-                    return "googlechrome";
-
-                case "Brave":
-                    return "brave";
-
-                case "Opera":
-                    return "opera";
-
-                case "Vivaldi":
-                    return "vivaldi";
-
-                case "Putty":
-                    return "putty";
-
-                case "Utorrent":
-                    return "utorrent";
-
-                case "VLC":
-                    return "vlc";
-
-                case "Spotify":
-                    return "spotify";
-
-                case "WhatsApp":
-                    return "whatsapp";
-
-                case "Discord":
-                    return "discord";
-
-                case "MicrosoftTeams":
-                    return "microsoft-teams";
-
-                case "VsCode":
-                    return "vscode";
-
-                case "SublimeText3":
-                    return "sublimetext3.app";
-
-                case "Python3":
-                    return "python";
-
-                case "Git":
-                    return "git";
-
-                case "Pycharm":
-                    return "pycharm";
-
-                case "Steam":
-                    return "steam-client";
-
-                case "EpicGames":
-                    return "epicgameslauncher";
-
-                case "BattleNet":
-                    return "battle.net";
-
-                case "LeagueOfLegends":
-                    return "leagueoflegends";
-
-                default:
-                    return "";
-            }
-        }
     }
 }

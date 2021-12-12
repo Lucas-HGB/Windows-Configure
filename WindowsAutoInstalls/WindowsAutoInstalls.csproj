@@ -119,11 +119,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BackEnd\Downloads.cs" />
+    <Compile Include="BackEnd\Downloads\Chocolatey.cs" />
+    <Compile Include="BackEnd\Downloads\DownloadLinks.cs" />
+    <Compile Include="BackEnd\Downloads\DownloadsHandler.cs" />
+    <Compile Include="BackEnd\Downloads\Web.cs" />
+    <Compile Include="BackEnd\SystemTools.cs" />
+    <Compile Include="BackEnd\Utils.cs" />
     <Compile Include="BackEnd\Windows.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Elements\ToggleButton.cs" />
+    <Compile Include="Exceptions\AppInstallExceptions.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -172,10 +178,11 @@
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\ConfiguracoesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\CustomizacoesViewModel.cs" />
-    <Compile Include="MVVM\ViewModel\DownloadsViewModel.cs" />
-    <Compile Include="MVVM\ViewModel\DownloadsViewModel2.cs" />
-    <Compile Include="MVVM\ViewModel\DownloadsViewModel3.cs" />
-    <Compile Include="MVVM\ViewModel\DownloadsViewModel1.cs" />
+    <Compile Include="MVVM\ViewModel\Downloads\DownloadsViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\Downloads\DownloadsViewModel2.cs" />
+    <Compile Include="MVVM\ViewModel\Downloads\DownloadsViewModel3.cs" />
+    <Compile Include="MVVM\ViewModel\Downloads\DownloadsViewModel1.cs" />
+    <Compile Include="MVVM\ViewModel\Downloads\DownloadView.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\UtilidadesViewModel.cs" />
     <Compile Include="MVVM\View\ConfiguracoesView.xaml.cs">

@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WindowsAutoInstalls",
-    "\\WindowsAutoInstalls\\MVVM"
+    "\\WindowsAutoInstalls"
   ],
-  "SelectedNode": "\\WindowsAutoInstalls\\MainWindow.xaml.cs",
+  "SelectedNode": "\\WindowsAutoInstalls.sln",
   "PreviewInSolutionExplorer": false
 }

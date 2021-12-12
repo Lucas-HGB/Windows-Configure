@@ -9,17 +9,10 @@ using WindowsAutoInstalls.BackEnd;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
-    class DownloadsViewModel1 : ObservableObject
+    class DownloadsViewModel3 : DownloadView
     {
-
-        public RelayCommand DownloadApp { get; set; }
-
-        public DownloadsViewModel1()
+        public DownloadsViewModel3()
         {
-            DownloadApp = new RelayCommand(o =>
-            {
-                Windows.Windows.DownloadApp(o.ToString());
-            });
         }
     }
 }

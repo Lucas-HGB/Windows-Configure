@@ -5,19 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WindowsAutoInstalls.Core;
-using WindowsAutoInstalls.BackEnd;
+using WindowsAutoInstalls.BackEnd.Downloads;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
-    class DownloadsViewModel2 : ObservableObject
+    class DownloadView : ObservableObject
     {
         public RelayCommand DownloadApp { get; set; }
 
-        public DownloadsViewModel2()
+        public DownloadView()
         {
             DownloadApp = new RelayCommand(o =>
             {
-                Windows.Windows.DownloadApp(o.ToString());
+                DownloadsHandler.DownloadApp(o.ToString());
             });
         }
     }

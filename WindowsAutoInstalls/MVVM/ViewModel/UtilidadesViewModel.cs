@@ -1,16 +1,6 @@
-﻿using Microsoft.TeamFoundation.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls.Primitives;
+﻿using System.Windows;
 using WindowsAutoInstalls.BackEnd;
 using WindowsAutoInstalls.Core;
-using NATUPNPLib;
-using NETCONLib;
-using NetFwTypeLib;
-using System.Windows;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
@@ -23,7 +13,7 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
 
         public RelayCommand ActivateWindows { get; set; }
 
-        private bool _firewallStatus = Windows.Windows.GetFirewallStatus();
+        private bool _firewallStatus = SystemTools.GetFirewallStatus();
 
         public bool FirewallStatus
         {
@@ -43,9 +33,9 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             set { _firewallStatusString = value; }
         }
 
-        public void ToggleFirewallString()
+        public void UpdateFirewallString(bool status)
         {
-            if (Windows.Windows.GetFirewallStatus())
+            if (status)
             {
                 _firewallStatusString = "On";
             }
@@ -55,23 +45,23 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
             }
         }
 
-
-
         public UtilidadesViewModel()
         {
-            ToggleFirewallString();
+            UpdateFirewallString(SystemTools.GetFirewallStatus());
             ToggleFirewall = new RelayCommand(o =>
             {
-                Windows.Windows.ToggleFirewallState();
-                FirewallStatus = Windows.Windows.GetFirewallStatus();
-                ToggleFirewallString();
+                bool firewallStatus = SystemTools.ToggleFirewallState();
+                if (firewallStatus.Equals(_firewallStatus))
+                {
+                    MessageBox.Show("Inicie o programa como Admin para alterar configurações de Firewall!");
+                }
+                UpdateFirewallString(firewallStatus);
             });
 
             ActivateWindows = new RelayCommand(o =>
             {
-                Windows.Windows.ActivateWindows();
+                bool windowsActivated = Windows.ActivateWindows();
             });
         }
-
     }
 }

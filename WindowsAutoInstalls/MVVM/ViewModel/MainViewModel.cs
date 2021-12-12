@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WindowsAutoInstalls.Core;
+using WindowsAutoInstalls.BackEnd;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
@@ -36,6 +37,10 @@ namespace WindowsAutoInstalls.MVVM.ViewModel
         }
         public MainViewModel()
         {
+            if (!Utils.IsAdministrator())
+            {
+                MessageBox.Show("Favor iniciar o programa como administrador para funcionalidade completa do programa!");
+            }
             DownloadsVM = new DownloadsViewModel();
             ConfiguracoesVM = new ConfiguracoesViewModel();
             CustomizacoesVM = new CustomizacoesViewModel();
