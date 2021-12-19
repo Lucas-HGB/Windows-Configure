@@ -14,7 +14,7 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
     public class DownloadsHandler
     {
 
-        public static void DownloadApp(string appName)
+        public static Exception DownloadApp(string appName)
         {
             string chocolateyAppName;
             Exception installException = null;
@@ -44,11 +44,7 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
                 } catch(Exception excp) { installException = excp; }
                 
             }
-
-            if (installException != null)
-            {
-                MessageBox.Show(installException.Message);
-            }
+            return installException;
         }
 
     }

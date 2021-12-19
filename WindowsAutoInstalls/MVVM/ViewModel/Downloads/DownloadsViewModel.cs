@@ -4,58 +4,83 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using WindowsAutoInstalls.Core;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
-    class DownloadsViewModel : ObservableObject
+    class DownloadsViewModel : ViewModelBase
     {
-        public DownloadsViewModel1 Downloads1VM { get; set; }
-        public RelayCommand Downloads1ViewCommand { get; set; }
 
-        public DownloadsViewModel2 Downloads2VM { get; set; }
-        public RelayCommand Downloads2ViewCommand { get; set; }
+        public List<ViewModelBase> Pages = new List<ViewModelBase>();
 
-        public DownloadsViewModel3 Downloads3VM { get; set; }
-        public RelayCommand Downloads3ViewCommand { get; set; }
+        public Dictionary<string, List<string>> CategoryApps;
 
-        public RelayCommand DownloadApp { get; set; }
-
-        private object _currentView;
-        public object CurrentView
+        private ViewModelBase _currentPageView;
+        public ViewModelBase CurrentPageView
         {
-            get { return _currentView; }
+            get { return _currentPageView; }
             set
             {
-                _currentView = value;
-                OnPropertyChanged();
+                _currentPageView = value;
+                OnPropertyChanged("CurrentPageView");
             }
+        }
+
+        private CommandHandler _previousPageCommand;
+        public CommandHandler PreviousPageCommand
+        {
+            get 
+            {
+                return _previousPageCommand ?? (_previousPageCommand = new CommandHandler(param => PreviousPage(), true));
+            }
+            set 
+            { 
+                _previousPageCommand = value; 
+                OnPropertyChanged("PreviousPageCommand"); 
+            }
+        }
+
+        private CommandHandler _nextPageCommand;
+        public CommandHandler NextPageCommand
+        {
+            get 
+            {
+                return _nextPageCommand ?? (_nextPageCommand = new CommandHandler(param => NextPage(), true));
+            }
+            set
+            {
+                _nextPageCommand = value;
+                OnPropertyChanged("NextPageCommand");
+            }
+        }
+
+        private void PreviousPage()
+        {
+            int currentIdx = Pages.IndexOf(CurrentPageView);
+            if (currentIdx == 0)
+            {
+                return;
+            }
+            CurrentPageView = Pages[currentIdx-1];
+        }
+
+        private void NextPage()
+        {
+            int currentIdx = Pages.IndexOf(CurrentPageView);
+            if (currentIdx + 1 == Pages.Count)
+            {
+                return;
+            }
+            CurrentPageView = Pages[currentIdx + 1];
         }
 
         public DownloadsViewModel()
         {
-            Downloads1VM = new DownloadsViewModel1();
-            Downloads2VM = new DownloadsViewModel2();
-            Downloads3VM = new DownloadsViewModel3();
-            CurrentView = Downloads1VM;
-            Downloads1ViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = Downloads1VM;
-            });
-            Downloads2ViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = Downloads2VM;
-            });
-
-            Downloads3ViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = Downloads3VM;
-            });
-
-            DownloadApp = new RelayCommand(o =>
-            {
-                MessageBox.Show(o.ToString());
-            });
+            Pages.Add(new DownloadsViewModel1());
+            Pages.Add(new DownloadsViewModel2());
+            Pages.Add(new DownloadsViewModel3());
+            CurrentPageView = Pages[0];
         }
     }
 }

@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using System.Windows;
 using WindowsAutoInstalls.Core;
 using WindowsAutoInstalls.BackEnd.Downloads;
+using System.Windows.Input;
 
 namespace WindowsAutoInstalls.MVVM.ViewModel
 {
-    class DownloadView : ObservableObject
+    class DownloadView : ViewModelBase
     {
-        public RelayCommand DownloadApp { get; set; }
+
+        public void DownloadApp(string selectedApp)
+        {
+
+        }
 
         public DownloadView()
         {
-            DownloadApp = new RelayCommand(o =>
-            {
-                DownloadsHandler.DownloadApp(o.ToString());
-            });
+
         }
     }
 }

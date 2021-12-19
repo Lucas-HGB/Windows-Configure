@@ -5,33 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowsAutoInstalls.MVVM.View"
              xmlns:viewModel="clr-namespace:WindowsAutoInstalls.MVVM.ViewModel" 
-             xmlns:view="clr-namespace:WindowsAutoInstalls.MVVM.View"
              d:DataContext="{d:DesignInstance Type=viewModel:DownloadsViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel1}">
-                <view:DownloadsView1/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel2}">
-                <view:DownloadsView2/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:DownloadsViewModel3}">
-                <view:DownloadsView3/>
-            </DataTemplate>
-        </ResourceDictionary>
-    </UserControl.Resources>
 
     <Grid>
         <ContentControl Grid.Row="1"
                         Grid.Column="1"
                         Margin="10"
-                        Content="{Binding CurrentView}">
+                        Content="{Binding CurrentPageView}">
         </ContentControl>
+        
         <StackPanel VerticalAlignment="Bottom"
                     Orientation="Horizontal" 
                     HorizontalAlignment="Center">
@@ -45,12 +29,10 @@
                     <Setter Property="Margin" Value="0,0,3,3"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Content="1"
-                        Command="{Binding Downloads1ViewCommand}"/>
-            <Button Content="2"
-                        Command="{Binding Downloads2ViewCommand}"/>
-            <Button Content="3"
-                        Command="{Binding Downloads3ViewCommand}"/>
+            <Button Content="&lt;"
+                        Command="{Binding PreviousPageCommand}"/>
+            <Button Content=">"
+                        Command="{Binding NextPageCommand}"/>
         </StackPanel>
 
     </Grid>

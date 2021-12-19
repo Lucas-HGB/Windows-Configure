@@ -10,7 +10,7 @@
         Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="Transparent"
+        Background="Black"
         AllowsTransparency="True">
 
     <Window.DataContext>
@@ -43,7 +43,8 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding DownloadsViewCommand}"
+                             Command="{Binding SwitchViewCommand}"
+                             CommandParameter="{Binding DownloadsVM}"
                              FontFamily="/Fonts/#Poppins"/>
 
                 <RadioButton Content="Utilidades"
@@ -51,7 +52,8 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding UtilidadesViewCommand}"
+                             Command="{Binding SwitchViewCommand}"
+                             CommandParameter="{Binding UtilidadesVM}"
                              FontFamily="/Fonts/#Poppins"/>
 
                 <RadioButton Content="Customizações"
@@ -59,7 +61,8 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding CustomizacoesViewCommand}"
+                             Command="{Binding SwitchViewCommand}"
+                             CommandParameter="{Binding CustomizacoesVM}"
                              FontFamily="/Fonts/#Poppins"/>
 
                 <RadioButton Content="Configurações"
@@ -67,7 +70,8 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding ConfiguracoesViewCommand}"
+                             Command="{Binding SwitchViewCommand}"
+                             CommandParameter="{Binding ConfiguracoesVM}"
                              FontFamily="/Fonts/#Poppins"/>
             </StackPanel>
             <ContentControl Grid.Row="1"

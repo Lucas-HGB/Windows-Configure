@@ -260,4 +260,3 @@ C:\Users\lucas\Documents\GitHub\WindowsConfigure\WindowsAutoInstalls\obj\Debug\W
 C:\Users\lucas\Documents\GitHub\WindowsConfigure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub\WindowsConfigure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.exe
 C:\Users\lucas\Documents\GitHub\WindowsConfigure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.pdb
-C:\Users\lucas\Documents\GitHub\WindowsConfigure\WindowsAutoInstalls\obj\Debug\WindowsAutoInstalls.csproj.AssemblyReference.cache
