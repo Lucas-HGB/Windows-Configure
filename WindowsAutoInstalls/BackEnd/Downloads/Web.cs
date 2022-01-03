@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WindowsAutoInstalls.Components;
 using WindowsAutoInstalls.Exceptions;
 
 namespace WindowsAutoInstalls.BackEnd.Downloads
@@ -14,40 +15,24 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
 
     public class Web
     {
-        private static WebClient WebClient = new WebClient();
+        private static readonly WebClient WebClient = new WebClient();
 
-        private static string GetAppSavePath(string appName, string url)
+        private static string GetAppSavePath(DownloadableApp app)
         {
-            string[] splitUrl = url.Split('.');
-            string fileExtension = splitUrl[splitUrl.Count() - 1];
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location); // Path that program is being executed.
-            switch (fileExtension)
-            {
-                case "exe":
-                    return Path.Combine(path, $"{appName}.exe");
-
-                case "msi":
-                    return Path.Combine(path, $"{appName}.msi");
-
-                case "zip":
-                    return Path.Combine(path, $"{appName}.zip");
-
-                default:
-                    return Path.Combine(path, $"{appName}.exe");
-            }
+            return Path.Combine(path, app.SavePath);
         }
 
-        public static void DownloadAppViaFile(string appName)
+        public static void DownloadAppViaFile(DownloadableApp app)
         {
-            string url = DownloadLinks.GetLink(appName);
-            string path = GetAppSavePath(appName, url);
+            string path = GetAppSavePath(app);
             MessageBox.Show(path);
             try
             {
-                WebClient.DownloadFile(url, path);
+                WebClient.DownloadFile(app.DownloadLink, path);
+                ExecuteFile(path);
             }
-            catch { throw new FailedToDownloadFile(appName, url); }
-            ExecuteFile(path);
+            catch { throw new FailedToDownloadFile(app.Name, app.DownloadLink); }
         }
 
         private static void ExecuteFile(string filePath)

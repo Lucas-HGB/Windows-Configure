@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WindowsAutoInstalls.Components;
 using WindowsAutoInstalls.Exceptions;
 
 namespace WindowsAutoInstalls.BackEnd.Downloads
@@ -14,7 +15,7 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
     public class DownloadsHandler
     {
 
-        public static Exception DownloadApp(string appName)
+        public static Exception DownloadApp(DownloadableApp app)
         {
             string chocolateyAppName;
             Exception installException = null;
@@ -25,14 +26,14 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
 
             try
             {
-                chocolateyAppName = Chocolatey.GetPackageName(appName);
+                chocolateyAppName = Chocolatey.GetPackageName(app.Name);
             } catch (PackageNotFoundException) { chocolateyAppName = ""; }
 
             if (String.IsNullOrEmpty(chocolateyAppName))
             {
                 try
                 {
-                    Web.DownloadAppViaFile(appName);
+                    Web.DownloadAppViaFile(app);
                 } catch(FailedToDownloadFile excp) { installException = excp; }
                 
             }
@@ -40,7 +41,7 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
             {
                 try
                 {
-                    Chocolatey.InstallPackage(appName);
+                    Chocolatey.InstallPackage(app.Name);
                 } catch(Exception excp) { installException = excp; }
                 
             }

@@ -7,7 +7,7 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
 {
     public class Chocolatey
     {
-        private static Process processo = Utils.CreateProcess();
+        private static readonly Process processo = Utils.CreateProcess();
 
         private static readonly string chocoPath = "C:\\ProgramData\\chocolatey\\bin\\chocolatey.exe";
 
@@ -26,10 +26,14 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
 
         public static string GetPackageName(string appName)
         {
+            string bestHit;
             processo.StartInfo.Arguments = $"choco search {appName} -r --approved-only --not-broken";
             processo.Start();
             processo.WaitForExit();
-            string bestHit = processo.StandardOutput.ReadLine().ToString().Split('|')[0];
+            try { 
+                bestHit = processo.StandardOutput.ReadLine().ToString().Split('|')[0]; 
+            } catch (System.NullReferenceException) { throw new PackageNotFoundException(appName); }
+            
             // MessageBox.Show(bestHit);
             if (!appName.ToLower().Contains(bestHit.ToLower()))
             {
@@ -47,7 +51,6 @@ namespace WindowsAutoInstalls.BackEnd.Downloads
             {
                 throw new FailedToInstallChocolateyPackage(appName, processo);
             }
-            // MessageBox.Show(processo.StandardOutput.ReadToEnd());
             return processo.ExitCode;
         }
     }
